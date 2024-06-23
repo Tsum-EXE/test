@@ -1,0 +1,22 @@
+body {
+    background-image:url('nobgbionernasdf.png');
+    background-size:cover;
+    justify-content:center;
+    display:flex;
+}
+#asdf {
+    animation:float 3s forwards cubic-bezier(.36,0,.64,.99);
+    animation-iteration-count: infinite;
+}
+
+@keyframes float {
+    0% {
+        transform:translateY(7%)
+    }
+    50% {
+        transform:translateY(14%)
+    }
+    100% {
+        transform:translateY(7%)
+    }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy</title>
+    <link rel="icon" href="../gamingair/icon.png">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="logoContainer">
+    <img src="jeapardylogo.png" alt="logo">
+  </section>
+  <section id="scoreContainer">
+    <button id="addTeam" onclick="createTeam()">Add Team +</button>
+    <div class="listHolder">
+      <ul id="teamList">
+      </ul>
+    </div>
+    <dialog>
+      <h4>Team Name</h4>
+      <input type="text" id="teamNameInput">
+      <button id="submit" autofocus>Submit</button>
+      <button id="dum" autofocus>Close</button>
+    </dialog>
+  </section>
+  <section id="questionContainer">
+    <table>
+      <tr class="row1">
+        <th class="column1">
+          <div class="card" data-value="random filler text for card" id="c1r1" onclick="flipCard('c1r1', '100')">
+            <h3 id="c1r1a">100</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column2">
+          <div class="card" data-value="random filler text for card" id="c2r1" onclick="flipCard('c2r1', '100')">
+            <h3 id="c2r1a">100</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column3">
+          <div class="card" data-value="random filler text for card" id="c3r1" onclick="flipCard('c3r1', '100')">
+            <h3 id="c3r1a">100</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column4">
+          <div class="card" data-value="random filler text for card" id="c4r1" onclick="flipCard('c4r1', '100')">
+            <h3 id="c4r1a">100</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column5">
+          <div class="card" data-value="random filler text for card" id="c5r1" onclick="flipCard('c5r1', '100')">
+            <h3 id="c5r1a">100</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="row2">
+        <th class="column1">
+          <div class="card" data-value="random filler text for card" id="c1r2" onclick="flipCard('c1r2', '200')">
+            <h3 id="c1r2a">200</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column2">
+          <div class="card" data-value="random filler text for card" id="c2r2" onclick="flipCard('c2r2', '200')">
+            <h3 id="c2r2a">200</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column3">
+          <div class="card" data-value="random filler text for card" id="c3r2" onclick="flipCard('c3r2', '200')">
+            <h3 id="c3r2a">200</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column4">
+          <div class="card" data-value="random filler text for card" id="c4r2" onclick="flipCard('c4r2', '200')">
+            <h3 id="c4r2a">200</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column5">
+          <div class="card" data-value="random filler text for card" id="c5r2" onclick="flipCard('c5r2', '200')">
+            <h3 id="c5r2a">200</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="row3">
+        <th class="column1">
+          <div class="card" data-value="random filler text for card" id="c1r3" onclick="flipCard('c1r3', '300')">
+            <h3 id="c1r3a">300</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column2">
+          <div class="card" data-value="random filler text for card" id="c2r3" onclick="flipCard('c2r3', '300')">
+            <h3 id="c2r3a">300</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column3">
+          <div class="card" data-value="random filler text for card" id="c3r3" onclick="flipCard('c3r3', '300')">
+            <h3 id="c3r3a">300</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column4">
+          <div class="card" data-value="random filler text for card" id="c4r3" onclick="flipCard('c4r3', '300')">
+            <h3 id="c4r3a">300</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column5">
+          <div class="card" data-value="random filler text for card" id="c5r3" onclick="flipCard('c5r3', '300')">
+            <h3 id="c5r3a">300</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="row4">
+        <th class="column1">
+          <div class="card" data-value="random filler text for card" id="c1r4" onclick="flipCard('c1r4', '400')">
+            <h3 id="c1r4a">400</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column2">
+          <div class="card" data-value="random filler text for card" id="c2r4" onclick="flipCard('c2r4', '400')">
+            <h3 id="c2r4a">400</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column3">
+          <div class="card" data-value="random filler text for card" id="c3r4" onclick="flipCard('c3r4', '400')">
+            <h3 id="c3r4a">400</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column4">
+          <div class="card" data-value="random filler text for card" id="c4r4" onclick="flipCard('c4r4', '400')">
+            <h3 id="c4r4a">400</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column5">
+          <div class="card" data-value="random filler text for card" id="c5r4" onclick="flipCard('c5r4', '400')">
+            <h3 id="c5r4a">400</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+      </tr>
+      <tr class="row5">
+        <th class="column1">
+          <div class="card" data-value="random filler text for card" id="c1r5" onclick="flipCard('c1r5', '500')">
+            <h3 id="c1r5a">500</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column2">
+          <div class="card" data-value="random filler text for card" id="c2r5" onclick="flipCard('c2r5', '500')">
+            <h3 id="c2r5a">500</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column3">
+          <div class="card" data-value="random filler text for card" id="c3r5" onclick="flipCard('c3r5', '500')">
+            <h3 id="c3r5a">500</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column4">
+          <div class="card" data-value="random filler text for card" id="c4r5" onclick="flipCard('c4r5', '500')">
+            <h3 id="c4r5a">500</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+        <th class="column5">
+          <div class="card" data-value="random filler text for card" id="c5r5" onclick="flipCard('c5r5', '500')">
+            <h3 id="c5r5a">500</h3>
+            <p class="answer">answer goes here</p>
+          </div>
+        </th>
+      </tr>
+    </table>
+  </section>
+  
+    <nav class="barr" style="z-index:20;">
+        <ul class="bar">
+            <img alt="can" src="../gamingair/can.png" style="height:3vh; transform:translate(0,20%);">
+            <button onclick="window.location.href='../gamingair/index.html'" class="navbar-item">
+                <a class="ittem">
+                    Gaming Air
+                </a>
+            </button>
+            <button onclick="window.location.href='../gamingice/index.html'" class="navbar-item">
+              <a class="ittem">
+                  Gaming Ice
+              </a>
+          </button>
+            <button onclick="window.location.href='../adventures/index.html'" class="navbar-item">
+                <a class="ittem">
+                    Adventures of Mink
+                </a>
+            </button>
+            <button onclick="window.location.href='../hsshennanigans/hsindex.html'" class="navbar-item">
+                <a class="ittem">
+                    High Skewl Reviews
+                </a>
+            </button>
+            <button onclick="window.location.href='../shop/index.html'" class="navbar-item">
+                <a class="ittem">
+                    Shop
+                </a>
+            </button>
+            <button onclick="window.location.href='https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=tsumtsumbolt%40gmail.com&cc=&bcc=&su=&body='" class="navbar-item">
+                <a class="ittem">
+                    Questions
+                </a>
+            </button>
+        </ul>
+    </nav>
+</body>
+</html>
